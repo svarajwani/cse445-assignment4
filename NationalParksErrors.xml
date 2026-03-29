@@ -31,18 +31,17 @@
   </NationalPark>
 
   <NationalPark Rating="4.7">
-    <n>Yosemite</n>
-    <!-- Error 4: Missing closing tag for Phone element -->
-    <Phone>209-372-0200
-    <Phone>209-372-0740</Phone>
-    <Address NearestAirport="Oakland">
-      <Number>5000</Number>
-      <Street>Yosemite Valley Loop Road</Street>
-      <City>Yosemite Valley</City>
-      <State>CA</State>
-      <Zip>95389</Zip>
-    </Address>
-  </NationalPark>
+      <Name>Yosemite</Name>
+      <Phone>209-372-0200</Phone>
+      <Phone>209-372-0740</Phone>
+      <!-- Error 4: Address element has no closing tag -->
+      <Address NearestAirport="Oakland">
+          <Number>5000</Number>
+          <Street>Yosemite Valley Loop Road</Street>
+          <City>Yosemite Valley</City>
+          <State>CA</State>
+          <Zip>95389</Zip>
+      </NationalPark>
 
   <NationalPark Rating="4.6">
     <!-- Error 5: Multiple names for one national park -->
@@ -98,8 +97,6 @@
 
   <NationalPark Rating="4.3">
     <n>Acadia</n>
-    <Phone>207-288-3338</Phone>
-    <Phone>207-288-4632</Phone>
     <Address NearestAirport="Boston">
       <Number>25</Number>
       <Street>Park Loop Road</Street>
