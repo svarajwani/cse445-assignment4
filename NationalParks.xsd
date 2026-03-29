@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  
-  <!-- Root element -->
   <xs:element name="NationalParks">
     <xs:complexType>
       <xs:sequence>
@@ -10,17 +8,15 @@
     </xs:complexType>
   </xs:element>
 
-  <!-- NationalPark complex type -->
   <xs:complexType name="NationalParkType">
     <xs:sequence>
-      <xs:element name="n" type="xs:string"/>
+      <xs:element name="Name" type="xs:string"/>
       <xs:element name="Phone" type="xs:string" maxOccurs="unbounded"/>
       <xs:element name="Address" type="AddressType"/>
     </xs:sequence>
-    <xs:attribute name="Rating" type="RatingType" use="optional"/>
+    <xs:attribute name="Rating" type="xs:string" use="optional"/>
   </xs:complexType>
 
-  <!-- Address complex type -->
   <xs:complexType name="AddressType">
     <xs:sequence>
       <xs:element name="Number" type="xs:string"/>
@@ -31,13 +27,4 @@
     </xs:sequence>
     <xs:attribute name="NearestAirport" type="xs:string" use="required"/>
   </xs:complexType>
-
-  <!-- Rating type - decimal between 0 and 5 -->
-  <xs:simpleType name="RatingType">
-    <xs:restriction base="xs:decimal">
-      <xs:minInclusive value="0.0"/>
-      <xs:maxInclusive value="5.0"/>
-    </xs:restriction>
-  </xs:simpleType>
-
 </xs:schema>
